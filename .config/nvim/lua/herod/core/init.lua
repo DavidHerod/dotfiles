@@ -12,5 +12,5 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
-vim.api.nvim_set_hl(0, "Comment", { ctermfg = "Red" })
-vim.api.nvim_set_hl(0, "Normal", { bg = "#ff0000" })
+-- vim.api.nvim_set_hl(0, "Comment", { ctermfg = "Red" })
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#ff0000" })
