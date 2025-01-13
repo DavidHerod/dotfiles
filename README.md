@@ -17,6 +17,10 @@
 - https://github.com/josean-dev/dev-environment-files
 - https://github.com/ThePrimeagen/neovimrc
 
+### Tmux
+
+- https://www.josean.com/posts/tmux-setup
+
 ### Initial setup
 
 #### Create repo (create new config)
@@ -51,6 +55,9 @@ config push
 ### Installation
 
 ```bat
+# tmux
+brew install tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # NeoVim
 brew install neovim
@@ -71,7 +78,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 #Powerlevel10k theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
-
 #Java
 
 brew install openjdk@11
@@ -93,10 +99,36 @@ brew install gvm
 brew install nvm
 ```
 
-### NeoVim CheatSheet
+## Cheatsheets
+
+### NeoVim
 
 - \<leader\>sk - view keymapings
 
-### Formatting
+#### Formatting
 
 - :TSHighlightCapturesUnderCursor - Highlights debuging (treesitter playground required)
+
+### Tmux
+
+#### General
+
+- C-a [ #copy mode, j/k for up/down, v - view, y - yank, C-c - exit copy mode
+- C-a i #install plugins
+- C-a r #relaod config
+
+#### Sessions
+
+- tmux new -s [name] #new session
+- tmux -ls #show all sessions
+- tmux detach #exit session
+- tmux attach -t [name]
+- exit #terminate
+
+#### Windows
+
+- C-a c #new window
+- C-a m #maximise / minimise
+- C-a [number] #change window
+- C-a [n/p] #change next/previous
+- C-a w #see all
