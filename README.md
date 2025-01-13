@@ -129,6 +129,7 @@ brew install nvm
 
 - C-a c #new window
 - C-a m #maximise / minimise
+- C-a [-|] # split vertical / horizontal
 - C-a [number] #change window
 - C-a [n/p] #change next/previous
 - C-a w #see all
