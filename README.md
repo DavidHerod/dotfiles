@@ -1,6 +1,6 @@
 # Dev Environment Setup
 
-### References
+## References
 
 #### Dotfiles Repo
 
@@ -17,11 +17,11 @@
 - https://github.com/josean-dev/dev-environment-files
 - https://github.com/ThePrimeagen/neovimrc
 
-### Tmux
+#### Tmux
 
 - https://www.josean.com/posts/tmux-setup
 
-### Initial setup
+## Initial setup
 
 #### Create repo (create new config)
 
@@ -52,7 +52,7 @@ config commit -m "Add bashrc"
 config push
 ```
 
-### Installation
+## Installation
 
 ```bat
 # tmux
