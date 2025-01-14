@@ -57,4 +57,9 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Keybinding to compile and run Java files
-vim.api.nvim_set_keymap("n", "<leader>rr", ":w<CR>:!javac % && java %:r<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>rr",
+  ":w<CR>:cd %:p:h<CR>:!javac % && java %:r<CR>",
+  { noremap = true, silent = true }
+)
