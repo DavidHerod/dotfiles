@@ -99,6 +99,57 @@ brew install gvm
 brew install nvm
 ```
 
+### Java
+
+#### JDTLS
+
+Language server dependencies need to be either built from source or installed through mason and correctly referenced, see [eclipse.jdt.ls](https://github.com/eclipse-jdtls/eclipse.jdt.ls).
+An sampe config is as follows:
+
+```bat
+cmd = {
+    "java",
+    "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+    "-Dosgi.bundles.defaultStartLevel=4",
+    "-Declipse.product=org.eclipse.jdt.ls.core.product",
+    "-Dlog.protocol=true",
+    "-Dlog.level=ALL",
+    "-Xmx1g",
+    "--add-modules=ALL-SYSTEM",
+    "--add-opens",
+    "java.base/java.util=ALL-UNNAMED",
+    "--add-opens",
+    "java.base/java.lang=ALL-UNNAMED",
+    "-jar",
+
+-- replace [org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar] with correct version
+
+    home .. "/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar",
+    "-configuration",
+    home .. "/.local/share/nvim/mason/packages/jdtls/config_mac_arm",
+    "-data",
+    workspace_dir,
+  },
+
+```
+
+#### DAP
+
+Debugging adapter dependencies need to be either built from source or installed through mason and correctly referenced. See [java-debug](https://github.com/microsoft/java-debug). To include the debugger, configure init options:
+
+```bat
+init_options = {
+    bundles = {
+      vim.fn.glob(
+        home
+          .. "/Repositories/other/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar",
+        1
+      ),
+    },
+  },
+
+```
+
 ## Cheatsheets
 
 ### NeoVim

@@ -47,7 +47,13 @@ return {
         "black", -- python formatter
         "pylint",
         "eslint_d",
+        "java-debug-adapter",
+        "java-test",
       },
     })
+
+    -- There is an issue with mason-tools-installer running with VeryLazy, since it triggers on VimEnter which has already occurred prior to this plugin loading so we need to call install explicitly
+    -- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim/issues/39
+    vim.api.nvim_command("MasonToolsInstall")
   end,
 }

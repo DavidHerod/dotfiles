@@ -81,9 +81,11 @@ return {
     mason_lspconfig.setup_handlers({
       -- default handler for installed servers
       function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-        })
+        if server_name ~= "jdtls" then
+          lspconfig[server_name].setup({
+            capabilities = capabilities,
+          })
+        end
       end,
       ["svelte"] = function()
         -- configure svelte server
