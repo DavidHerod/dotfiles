@@ -132,8 +132,8 @@ cmd = {
 
 > [!NOTE]
 >
-> - replace org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar with correct version
-> - -configuration should point to correct architecture (eg: config_mac_arm);
+> replace org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar with correct version
+> -configuration should point to correct architecture (eg: config_mac_arm);
 
 #### DAP
 
@@ -151,6 +151,9 @@ init_options = {
   },
 
 ```
+
+> [!NOTE]
+> ensure correct path to dependencies.
 
 ## Cheatsheets
 
