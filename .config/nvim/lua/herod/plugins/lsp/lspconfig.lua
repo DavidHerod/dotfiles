@@ -81,7 +81,7 @@ return {
     mason_lspconfig.setup_handlers({
       -- default handler for installed servers
       function(server_name)
-        if server_name ~= "jdtls" then
+        if server_name ~= "jdtls" then -- ignore jdtls as configured elsewhere
           lspconfig[server_name].setup({
             capabilities = capabilities,
           })

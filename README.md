@@ -121,9 +121,6 @@ cmd = {
     "--add-opens",
     "java.base/java.lang=ALL-UNNAMED",
     "-jar",
-
--- replace [org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar] with correct version
-
     home .. "/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar",
     "-configuration",
     home .. "/.local/share/nvim/mason/packages/jdtls/config_mac_arm",
@@ -132,6 +129,11 @@ cmd = {
   },
 
 ```
+
+> [!NOTE]
+>
+> - replace org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar with correct version
+> - -configuration should point to correct architecture (eg: config_mac_arm);
 
 #### DAP
 
@@ -142,7 +144,7 @@ init_options = {
     bundles = {
       vim.fn.glob(
         home
-          .. "/Repositories/other/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar",
+          .. "/.config/nvim/tools/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar",
         1
       ),
     },
