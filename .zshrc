@@ -17,12 +17,15 @@ compinit
 
 plugins=(git zsh-autosuggestions zsh-completions)
 
-
+# nvm
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completiona
 
+# gvm
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
+# Alias
 alias config='/usr/bin/git --git-dir=$HOME/Repositories/davidherod/dotfiles --work-tree=$HOME'
 alias projects="cd ~/Repositories/" 
 alias aussurity="cd ~/Repositories/aussurity/"
@@ -58,3 +61,5 @@ source <(ng completion script)
 alias gameon='/Applications/Xcode.app/Contents/Developer/usr/bin/gamepolicyctl game-mode set on'
 alias gameoff='/Applications/Xcode.app/Contents/Developer/usr/bin/gamepolicyctl game-mode set auto'
 
+
+[[ -s "/Users/davidherod/.gvm/scripts/gvm" ]] && source "/Users/davidherod/.gvm/scripts/gvm"

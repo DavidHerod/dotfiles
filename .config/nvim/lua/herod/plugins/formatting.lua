@@ -5,6 +5,30 @@ return {
     local conform = require("conform")
 
     conform.setup({
+      formatters = {
+        html = {
+          command = "prettier",
+          args = {
+            "--parser",
+            "html", -- ✅ Explicitly specify HTML parser
+            "--html-whitespace-sensitivity",
+            "ignore",
+            "--print-width",
+            "80", -- ✅ Adjusted to encourage wrapping
+            "--tab-width",
+            "2",
+            "--use-tabs",
+            "false",
+            "--end-of-line",
+            "lf",
+            "--prose-wrap",
+            "always", -- ✅ Forces wrapping in prose content
+            "--wrap-attributes",
+            "force-aligned", -- ✅ Ensures attributes wrap cleanly
+          },
+          stdin = true,
+        },
+      },
       formatters_by_ft = {
         javascript = { "prettier" },
         typescript = { "prettier" },
@@ -12,7 +36,7 @@ return {
         typescriptreact = { "prettier" },
         svelte = { "prettier" },
         css = { "prettier" },
-        html = { "prettier" },
+        html = { "html" }, -- ✅ Uses the improved HTML formatter
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },

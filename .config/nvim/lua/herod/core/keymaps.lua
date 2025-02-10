@@ -60,7 +60,7 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.api.nvim_set_keymap(
   "n",
   "<leader>rr",
-  ":w<CR>:cd %:p:h<CR>:!javac % && java %:r<CR>",
+  ":w<CR>:cd %:p:h<CR>:!java --version && javac % && java %:r<CR>",
   { noremap = true, silent = true }
 )
 
