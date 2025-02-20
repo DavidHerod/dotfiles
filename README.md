@@ -105,8 +105,9 @@ brew install nvm
 
 ### Markdown Preview
 
-[!IMPORTANT]  
-Requires yarn and node
+> [!IMPORTANT]
+>
+> Requires yarn and node
 
 #### Commands
 
