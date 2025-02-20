@@ -7,25 +7,17 @@ return {
     "windwp/nvim-ts-autotag", -- Dependency for auto-closing and renaming HTML tags
   },
   config = function()
-    -- Import nvim-treesitter plugin
     local treesitter = require("nvim-treesitter.configs")
 
-    -- Configure Treesitter
     treesitter.setup({
-      -- Enable syntax highlighting
       highlight = {
         enable = false,
       },
-
-      -- Enable indentation
       indent = { enable = true },
-
-      -- Enable autotagging (w/ nvim-ts-autotag plugin)
+      fold = { enable = true },
       autotag = {
         enable = true,
       },
-
-      -- Ensure these language parsers are installed
       ensure_installed = {
         "java",
         "go",
@@ -52,8 +44,6 @@ return {
         "vimdoc",
         "c",
       },
-
-      -- Enable incremental selection
       incremental_selection = {
         enable = true,
         keymaps = {

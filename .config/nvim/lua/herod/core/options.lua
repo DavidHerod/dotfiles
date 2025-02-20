@@ -46,3 +46,9 @@ vim.api.nvim_set_hl(0, "javaClass", { fg = "#ff8700", bg = "NONE", bold = true }
 vim.api.nvim_set_hl(0, "javaMethod", { fg = "#d3869b" })
 vim.api.nvim_set_hl(0, "javaClass", { fg = "#00ff00", bg = "NONE", bold = true })
 vim.api.nvim_set_hl(0, "javaMethod", { fg = "#00ff00" })
+
+-- Enable folding with nvim_treesitter
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 99 -- Keeps top-level folds open
+vim.opt.foldopen:remove("all") -- Prevents auto-expanding all folds
