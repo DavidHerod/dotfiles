@@ -99,6 +99,19 @@ brew install gvm
 brew install nvm
 ```
 
+# NeoVim
+
+## Plugins
+
+### Markdown Preview
+
+[!IMPORTANT]  
+Requires yarn and node
+
+#### Commands
+
+:MarkdownPreview
+
 ### Java
 
 #### JDTLS
