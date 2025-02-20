@@ -17,6 +17,8 @@ compinit
 
 plugins=(git zsh-autosuggestions zsh-completions)
 
+alias clear='clear && printf "\033[3J"'
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
